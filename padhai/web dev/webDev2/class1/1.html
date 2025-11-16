@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF - 8" />
+    <meta
+      name="viewport"
+      content="width = device - width, initial - scale = 1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body id="body-1">
+    <button id="btn-1">Say Hello</button>
+    
+
+    <script>
+      const btn = document.getElementById('btn-1')
+      console.log(btn)
+
+      btn.addEventListener('click' , function(){
+        
+        const heading = document.createElement('h4')
+        heading.innerText = 'Hello'
+        console.log(heading)
+
+        //querySelector
+
+        const body = document.querySelector('body')
+
+        //appendChild
+
+        body.appendChild(heading)
+      })
+    </script>
+  </body>
+</html>

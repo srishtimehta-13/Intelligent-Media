@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataFlow AI - Intelligent Storage & Auto-Organization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="7" height="7" rx="1" fill="white"/>
+                    <rect x="3" y="13" width="7" height="7" rx="1" fill="white"/>
+                    <rect x="13" y="3" width="7" height="7" rx="1" fill="white"/>
+                    <rect x="13" y="13" width="7" height="7" rx="1" fill="white"/>
+                </svg>
+            </div>
+            <div class="header-text">
+                <h1>DataFlow AI</h1>
+                <p>Intelligent Storage & Auto-Organization</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <button class="nav-btn active" data-section="upload">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                </svg>
+                Upload
+            </button>
+            <button class="nav-btn" data-section="media">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                Media Library
+            </button>
+            <button class="nav-btn" data-section="data">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <path d="M14 2v6h6"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <line x1="10" y1="9" x2="8" y2="9"/>
+                </svg>
+                Data Structures
+            </button>
+            <button class="nav-btn" data-section="analytics">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+                Analytics
+            </button>
+        </nav>
+
+        <!-- Upload Section -->
+        <div id="upload" class="section active">
+            <div class="upload-area">
+                <div class="upload-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17 8 12 3 7 8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                </div>
+                <h2>Upload Your Data</h2>
+                <p>Drag & drop files here, or click to browse</p>
+                
+                <div class="file-type-btns">
+                    <button class="file-type-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                        Images
+                    </button>
+                    <button class="file-type-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2"/>
+                        </svg>
+                        Videos
+                    </button>
+                    <button class="file-type-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                        JSON
+                    </button>
+                </div>
+                
+                <button class="browse-btn">Browse Files</button>
+                <input type="file" id="fileInput" style="display: none;" multiple>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: #E3F2FD;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1976D2" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                    </div>
+                    <h3>Media Auto-Sort</h3>
+                    <p>AI analyzes and organizes images & videos by content</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: #FFF3E0;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F57C00" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <h3>Smart DB Selection</h3>
+                    <p>Automatically chooses SQL or NoSQL based on structure</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: #E8F5E9;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#388E3C" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Schema Generation</h3>
+                    <p>Creates optimized tables & indexes automatically</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Media Library Section -->
+        <div id="media" class="section">
+            <div class="search-bar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input type="text" placeholder="Search folders by content or category...">
+            </div>
+
+            <div class="folder-grid">
+                <div class="folder-card">
+                    <div class="folder-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=300&fit=crop');">
+                        <span class="folder-badge badge-image">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            Image
+                        </span>
+                    </div>
+                    <div class="folder-info">
+                        <div class="folder-header">
+                            <div class="folder-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B7FED" stroke-width="2">
+                                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Nature & Landscapes</h3>
+                                <p>24 items</p>
+                            </div>
+                        </div>
+                        <div class="folder-meta">
+                            <span>📅 2025-01-15</span>
+                            <span>💾 145 MB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=300&fit=crop');">
+                        <span class="folder-badge badge-video">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polygon points="23 7 16 12 23 17 23 7"/>
+                                <rect x="1" y="5" width="15" height="14" rx="2"/>
+                            </svg>
+                            Video
+                        </span>
+                    </div>
+                    <div class="folder-info">
+                        <div class="folder-header">
+                            <div class="folder-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B7FED" stroke-width="2">
+                                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Product Demos</h3>
+                                <p>8 items</p>
+                            </div>
+                        </div>
+                        <div class="folder-meta">
+                            <span>📅 2025-01-14</span>
+                            <span>💾 2.1 GB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="folder-card">
+                    <div class="folder-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=300&fit=crop');">
+                        <span class="folder-badge badge-image">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            Image
+                        </span>
+                    </div>
+                    <div class="folder-info">
+                        <div class="folder-header">
+                            <div class="folder-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B7FED" stroke-width="2">
+                                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>Team Photos</h3>
+                                <p>42 items</p>
+                            </div>
+                        </div>
+                        <div class="folder-meta">
+                            <span>📅 2025-01-12</span>
+                            <span>💾 312 MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Structures Section -->
+        <div id="data" class="section">
+            <div class="db-grid">
+                <div class="db-card">
+                    <div class="db-header">
+                        <div class="db-title">
+                            <div class="db-icon icon-sql">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1976D2" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>users</h3>
+                                <p class="db-type">PostgreSQL</p>
+                            </div>
+                        </div>
+                        <span class="db-badge badge-sql">SQL</span>
+                    </div>
+
+                    <div class="db-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">4</span>
+                            <span class="stat-label">Fields</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">2</span>
+                            <span class="stat-label">Indexes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">1.2k</span>
+                            <span class="stat-label">Records</span>
+                        </div>
+                    </div>
+
+                    <div class="field-list">
+                        <div class="field-item">
+                            <span class="field-name">id</span>
+                            <span class="field-type">INTEGER</span>
+                        </div>
+                        <div class="field-item">
+                            <span class="field-name">email</span>
+                            <span class="field-type">VARCHAR(255)</span>
+                        </div>
+                        <div class="field-item">
+                            <span class="field-name">name</span>
+                            <span class="field-type">VARCHAR(100)</span>
+                        </div>
+                    </div>
+
+                    <button class="view-details-btn">
+                        View Details
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="db-card">
+                    <div class="db-header">
+                        <div class="db-title">
+                            <div class="db-icon icon-nosql">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7B1FA2" stroke-width="2">
+                                    <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7"/>
+                                    <ellipse cx="12" cy="7" rx="8" ry="4"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>products</h3>
+                                <p class="db-type">MongoDB</p>
+                            </div>
+                        </div>
+                        <span class="db-badge badge-nosql">NoSQL</span>
+                    </div>
+
+                    <div class="db-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">7</span>
+                            <span class="stat-label">Fields</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Indexes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3.8k</span>
+                            <span class="stat-label">Records</span>
+                        </div>
+                    </div>
+
+                    <div class="field-list">
+                        <div class="field-item">
+                            <span class="field-name">_id</span>
+                            <span class="field-type">ObjectId</span>
+                        </div>
+                        <div class="field-item">
+                            <span class="field-name">name</span>
+                            <span class="field-type">String</span>
+                        </div>
+                        <div class="field-item">
+                            <span class="field-name">category</span>
+                            <span class="field-type">String</span>
+                        </div>
+                    </div>
+
+                    <button class="view-details-btn">
+                        View Details
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="db-card">
+                    <div class="db-header">
+                        <div class="db-title">
+                            <div class="db-icon icon-sql">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1976D2" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>orders</h3>
+                                <p class="db-type">PostgreSQL</p>
+                            </div>
+                        </div>
+                        <span class="db-badge badge-sql">SQL</span>
+                    </div>
+
+                    <div class="db-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">5</span>
+                            <span class="stat-label">Fields</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Indexes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">5.6k</span>
+                            <span class="stat-label">Records</span>
+                        </div>
+                    </div>
+
+                    <div class="field-list">
+                        <div class="field-item">
+                            <span class="field-name">id</span>
+                            <span class="field-type">INTEGER</span>
+                        </div>
+                        <div class="field-item">
+                            <span class="field-name">user_id</span>
+                            <span class="field-type">INTEGER</span>
+                        </div>
+                    </div>
+
+                    <button class="view-details-btn">
+                        View Details
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="db-card">
+                    <div class="db-header">
+                        <div class="db-title">
+                            <div class="db-icon icon-nosql">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7B1FA2" stroke-width="2">
+                                    <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7"/>
+                                    <ellipse cx="12" cy="7" rx="8" ry="4"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>analytics_events</h3>
+                                <p class="db-type">MongoDB</p>
+                            </div>
+                        </div>
+                        <span class="db-badge badge-nosql">NoSQL</span>
+                    </div>
+
+                    <div class="db-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">6</span>
+                            <span class="stat-label">Fields</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Indexes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">28.9k</span>
+                            <span class="stat-label">Records</span>
+                        </div>
+                    </div>
+
+                    <div class="field-list">
+                        <div class="field-item">
+                            <span class="field-name">_id</span>
+                            <span class="field-type">ObjectId</span>
+                        </div>
+                        <div class="field-item">
+                            <span class="field-name">event_type</span>
+                            <span class="field-type">String</span>
+                        </div>
+                    </div>
+
+                    <button class="view-details-btn">
+                        View Details
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Section -->
+        <div id="analytics" class="section">
+            <div class="analytics-grid">
+                <div class="stat-card">
+                    <div class="trend-icon">📈</div>
+                    <div class="stat-card-icon icon-blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1976D2" stroke-width="2">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+                            <polyline points="13 2 13 9 20 9"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-label">Total Files</div>
+                    <div class="stat-card-value">156</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="trend-icon">📈</div>
+                    <div class="stat-card-icon icon-purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7B1FA2" stroke-width="2">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-label">Auto-Organized Folders</div>
+                    <div class="stat-card-value">12</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="trend-icon">📈</div>
+                    <div class="stat-card-icon icon-green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#388E3C" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-label">DB Schemas</div>
+                    <div class="stat-card-value">8</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="trend-icon success">✓</div>
+                    <div class="stat-card-icon icon-yellow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F57C00" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-card-label">Accuracy</div>
+                    <div class="stat-card-value">98.5%</div>
+                </div>
+            </div>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                        Storage Usage
+                    </h3>
+                    <p class="info-subtitle">5.4 GB of 50 GB used</p>
+                    <div class="storage-bar">
+                        <div class="storage-fill"></div>
+                    </div>
+                    <div class="storage-info">
+                        <span>10.8% Used</span>
+                        <span>44.6 GB Free</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        Performance
+                    </h3>
+                    <p class="info-subtitle">System metrics</p>
+                    <div class="metric-row">
+                        <span class="metric-label">Avg. Processing Speed</span>
+                        <span class="metric-value">1.2s</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Last Processed</span>
+                        <span class="metric-value">⏱️ 2 minutes ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breakdown-section">
+                <h2>Processing Breakdown</h2>
+                <div class="progress-items">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Images Organized</span>
+                            <span class="progress-value">87</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 87%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">Videos Processed</span>
+                            <span class="progress-value">34</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span class="progress-label">JSON Schemas Created</span>
+                            <span class="progress-value">35</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-section">
+                <h2>Recent Activity</h2>
+                
+                <div class="activity-item">
+                    <div class="activity-icon icon-blue">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1976D2" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15l-5-5L5 21"/>
+                        </svg>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Organized 12 images into "Nature & Landscapes"</h4>
+                        <div class="activity-time">2 min ago</div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon icon-green">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#388E3C" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Created SQL schema for "user_profiles" table</h4>
+                        <div class="activity-time">5 min ago</div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon icon-purple">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7B1FA2" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Processed and categorized 3 tutorial videos</h4>
+                        <div class="activity-time">15 min ago</div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-icon icon-green">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#388E3C" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        </svg>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Auto-selected NoSQL for "analytics_events" collection</h4>
+                        <div class="activity-time">22 min ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

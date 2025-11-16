@@ -1,0 +1,435 @@
+/* Variables - Shades of Maroon */
+:root {
+  --maroon-dark: #5c0000;
+  --maroon: #800000;
+  --maroon-light: #a63333;
+  --maroon-lighter: #c46666;
+  --off-white: #f3f3f3;
+  --gray-dark: #2c2c2c;
+  --gray-light: #555555;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--off-white);
+  color: var(--maroon-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header and Nav */
+header {
+  background-color: var(--maroon);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--off-white);
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  color: var(--off-white);
+  cursor: pointer;
+  display: none;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--off-white);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-speed);
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--maroon-lighter);
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 0 6rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 span {
+  color: var(--maroon);
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--gray-dark);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--maroon);
+  color: var(--off-white);
+  padding: 0.75rem 1.75rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color var(--transition-speed);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--maroon-light);
+  outline: none;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-speed);
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: var(--maroon-dark);
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--gray-dark);
+}
+
+/* Skills Section */
+.skills {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  color: var(--maroon-dark);
+  margin-bottom: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background-color: var(--maroon-light);
+  color: var(--off-white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: 0 2px 5px rgba(92, 0, 0, 0.6);
+  cursor: default;
+  user-select: none;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.skills-list li:hover,
+.skills-list li:focus {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px var(--maroon-dark);
+  outline: none;
+}
+
+.skills-list img {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: var(--maroon-dark);
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-dark);
+}
+
+.contact a {
+  color: var(--maroon);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.contact a:hover,
+.contact a:focus {
+  color: var(--maroon-light);
+  outline: none;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);
+  transition: filter var(--transition-speed);
+}
+
+.social-links a:hover img,
+.social-links a:focus img {
+  filter: grayscale(0%);
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--maroon);
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--off-white);
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: var(--maroon);
+    width: 220px;
+    height: calc(100% - 60px);
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform var(--transition-speed) ease-in-out;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-links {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    flex: 1 1 100%;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
+}
+/* Add keyframes for fade-in and slide-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animate Hero Text */
+.hero-text {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animate Hero Paragraph with delay */
+.hero-text p {
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* Animate Hero Button with delay */
+.btn {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* Animate Hero Image with scale in */
+.hero-image img {
+  animation: fadeInScale 1s ease forwards;
+  opacity: 0;
+  transform-origin: center center;
+  animation-delay: 0.8s;
+}
+
+/* Nav Links fade in */
+.nav-links a {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.nav-links a:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.nav-links a:nth-child(2) {
+  animation-delay: 0.65s;
+}
+.nav-links a:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.nav-links a:nth-child(4) {
+  animation-delay: 0.95s;
+}
+
+/* Skills items fade and scale on load */
+.skills-list li {
+  opacity: 0;
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+.skills-list li:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.skills-list li:nth-child(2) {
+  animation-delay: 0.55s;
+}
+.skills-list li:nth-child(3) {
+  animation-delay: 0.7s;
+}
+.skills-list li:nth-child(4) {
+  animation-delay: 0.85s;
+}
+.skills-list li:nth-child(5) {
+  animation-delay: 1s;
+}
+
+/* Social icons fade in with delay */
+.social-links a {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.social-links a:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.social-links a:nth-child(2) {
+  animation-delay: 0.55s;
+}
+.social-links a:nth-child(3) {
+  animation-delay: 0.7s;
+}
